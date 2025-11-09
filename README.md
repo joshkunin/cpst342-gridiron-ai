@@ -45,4 +45,3 @@ Every Sunday my group chat argues for 3 hours about who covers the spread. Vegas
 - Vercel OR Heroku for hosting  
 - GitHub (obviously)  
 - VS Code + Copilot 
-
