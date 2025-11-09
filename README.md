@@ -43,4 +43,3 @@ Every Sunday my group chat argues for 3 hours about who covers the spread. Vegas
 - Free NFL stats APIs (ESPN, nflfastR, or mySportsFeeds)  
 - SQLite for saving user predictions  
 - Vercel OR Heroku for hosting  
-- GitHub (obviously)  
