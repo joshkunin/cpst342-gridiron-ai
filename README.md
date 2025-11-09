@@ -22,14 +22,29 @@ After this course, your application will consist of the following components lis
 ### Deliverable 1 (10 Points)
 For this deliverable, you will need to modify the readme file and add responses to the questions below. that you are currently reading and address the following items below using a variety of permissible markdown syntax.
 
-- Provide your name or the team's name
-- Name of the application
-- Description of application *Describe how someone will use your application
-- Describe the need and purpose of the application
-- Intended target audience
+- Provide your name or the team's name #  The A Team – Password Generator App
+- Name of the application **Password Generator App**
+- Description of application *Describe how someone will use your application Users can customize the password length and choose whether to include:
+- Uppercase letters  
+- Lowercase letters  
+- Numbers  
+- Special characters  
+- Describe the need and purpose of the application **help users protect their online accounts**
+- Intended target audience The intended target audience includes:
+- Students managing multiple logins for school accounts  
+- Professionals safeguarding work credentials  
+- Everyday users who want to enhance online safety 
 - Identify the various pages your application will have and describe what users will be able to accomplish
-- Identify three goals of the application
-- Identify tools/software you will use to complete the project. 
+1. **Home Page** – Introduces the app and provides quick access to the generator.  
+2. **Settings Page** – Allows users to customize password options such as length and character types.  
+3. **Results Page** – Displays the generated password with a **Copy** button for convenience.  
+- Identify three goals of the application Create a simple and intuitive interface for generating secure passwords. - Create a simple and intuitive interface for generating secure passwords.  
+- Encourage users to adopt stronger password habits.  
+- Demonstrate web development concepts such as **form input**, **loops**
+- Identify tools/software you will use to complete the project. - `HTML5` for structure  
+- `CSS` for styling  
+- `JavaScript` for interactivity and password logic  
+- `GitHub` for version control and collaboration
 * I suggest using an online coding environment that will allow your team to work collaboratively and practice git commands.  A few are listed below.
    - [CodeSandbox.io](https://codesandbox.io/)
    - [Replit.com](https://replit.com/)
