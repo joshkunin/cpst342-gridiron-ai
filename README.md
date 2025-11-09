@@ -46,4 +46,3 @@ Every Sunday my group chat argues for 3 hours about who covers the spread. Vegas
 - GitHub (obviously)  
 - VS Code + Copilot 
 
-Josh Kunin – CPST 342 – Fall 2025
