@@ -1,129 +1,49 @@
-# CPST 342 Group Project Repository 
+# Gridiron AI
 
-You will complete three assignments that will culminate in developing a monolithic full-stack web application. 
+**Team Name:** Josh Team  
+**Member:** Josh Kunin
 
-For the first group assignment, you will propose what type of app you will build and use the README.md file to document your responses to the questions for Assignment 1 deliverable 1.  All documentation pertaining to your project should occur in the README.md. 
+### App Name
+**Gridiron AI** – The Best NFL Game Predictor 
 
-After this course, your application will consist of the following components listed below.
+### How someone uses it
+1. Open the site on phone or laptop  
+2. Pick any game this week (like Bears vs Packers)  
+3. Hit “SIMULATE 1,000x”  
+4. Boom — you get:
+   - Final score prediction (27-24)
+   - Win % for each team
+   - Player prop odds (Justin Jefferson over 85.5 yards? 68% chance)
+   - A sick bar chart showing why one team wins
 
-1. Routing Framework using Express.js
-2. Demonstrate and utilize a REST API
-3. Create, Retrieve, Update and Delete (CRUD) Functionality
-4. Utilize SQLite Database for persistent data store
-5. Functional and User-friendly front-end interface
-6. Hosting that allows users to access the site via domain name
+### What makes this app great!
+Every Sunday my group chat argues for 3 hours about who covers the spread. Vegas lines don’t tell you WHY the Chiefs cook the Raiders. This app pulls Madden 25 ratings + real NFL stats + 1,000 simulations and actually shows you “Mahomes is 9-1 vs blitz-heavy teams this year”. Fantasy junkies are gonna live on this site.
 
-**Assignment 1 consist of deliverables 1,2 and 3** <br>
-**Assignment 2 consist of deliverables  4 and 5** <br>
-**Assignment 3 consist of deliverables 6 and 7** <br>
+### Who it’s for
+- NFL fans who think they’re smarter than Skip Bayless  
+- Fantasy football weirdos (me)  
+- Dudes who throw $20 on player props every Sunday  
+- My roommate who still thinks Mitch Trubisky was good
 
+### Pages I am building
+1. **Home** – big cards of every game this week  
+2. **Predictor** – pick a game → see rosters + hit SIMULATE  
+3. **Results** – score, win %, prop predictions, dope charts  
+4. **Saved Bets** – login and save your favorite predictions  
+5. **How It Works** – flex page explaining the math
 
-## Assignment 1  - Project proposal
-### Deliverable 1 (10 Points)
-For this deliverable, you will need to modify the readme file and add responses to the questions below. that you are currently reading and address the following items below using a variety of permissible markdown syntax.
+### Three Goals
+1. Predict final score within 4 points 70% of the time  
+2. Load results in under 8 seconds  
+3. Work perfectly on iPhone
 
-- Provide your name or the team's name #  The A Team – Password Generator App
-- Name of the application **Password Generator App**
-- Description of application *Describe how someone will use your application Users can customize the password length and choose whether to include:
-- Uppercase letters  
-- Lowercase letters  
-- Numbers  
-- Special characters  
-- Describe the need and purpose of the application **help users protect their online accounts**
-- Intended target audience The intended target audience includes:
-- Students managing multiple logins for school accounts  
-- Professionals safeguarding work credentials  
-- Everyday users who want to enhance online safety 
-- Identify the various pages your application will have and describe what users will be able to accomplish
-1. **Home Page** – Introduces the app and provides quick access to the generator.  
-2. **Settings Page** – Allows users to customize password options such as length and character types.  
-3. **Results Page** – Displays the generated password with a **Copy** button for convenience.  
-- Identify three goals of the application Create a simple and intuitive interface for generating secure passwords. - Create a simple and intuitive interface for generating secure passwords.  
-- Encourage users to adopt stronger password habits.  
-- Demonstrate web development concepts such as **form input**, **loops**
-- Identify tools/software you will use to complete the project. - `HTML5` for structure  
-- `CSS` for styling  
-- `JavaScript` for interactivity and password logic  
-- `GitHub` for version control and collaboration
-* I suggest using an online coding environment that will allow your team to work collaboratively and practice git commands.  A few are listed below.
-   - [CodeSandbox.io](https://codesandbox.io/)
-   - [Replit.com](https://replit.com/)
-   - [GitHub Codespaces](https://github.com/features/codespaces)
-     - Click [here](https://docs.github.com/en/codespaces/developing-in-a-codespace/working-collaboratively-in-a-codespace) for information on using codespaces to collaborate with group members. 
+### Tools I am using
+- Node.js + Express (backend)  
+- React with Vite (frontend)  
+- Free NFL stats APIs (ESPN, nflfastR, or mySportsFeeds)  
+- SQLite for saving user predictions  
+- Vercel OR Heroku for hosting  
+- GitHub (obviously)  
+- VS Code + Copilot 
 
-### Deliverable 2 (10 Points)
-For this deliverable, you will demonstrate your understanding of modules and JavaScript.  Listed below are tasks you will need to complete to satisfy the requirements for this deliverable.
-- Initialize NPM into your project folder and go through the process of creating a package.json file (3 points)
-- Create an index.js file and demonstrate your ability to declare and call functions *This file will be deleted prior to starting requirements for assignment 2. (4 points)
-- Search through the NPM marketplace and demonstrate your ability to add and use an external module that you will potentially use in your final project. (3 points)
-
-### Deliverable 3 (10 Points)
-For this deliverable, you will implement version control into your project folder.
-- Your remote repository will need to contain a minimum of 2 commits from each member for assignment 1 (6 points)
-- You will need to add a .gitignore file that ignores the node_modules folder (4 points)
-
-
-## Assignment 2 - Express Routing + CRUD Operations using SQLite Database.
-
-### Deliverable 4 - Routing and Middleware configuration (15 Points)
-For this deliverable, you will focus on implementing the necessary middleware needed to configure and route your application. Feel free to refer back to the [node.js](https://instructorc.github.io/site/slides/logic/nodejs.html) presentation for code samples and an explanation of concepts.
-- Middleware is implemented for static files such as images, pdf's, etc (2 points)
-- Middleware is implemented for view templating engine (2 points)
-- Middleware configured to parse JSON data and interpret form data.  Implement the following code below to meet requirement. (2 points)
-``` javascript
- // parse application/json
-app.use(express.json());
-
-// For parsing application/x-www-form-urlencoded
-app.use(express.urlencoded({ extended: true }));
-```
-
-- Application has a minimum of 5 routes implemented 
-  1.  A minimum of three routes should accept data. Both the GET and POST methods will need to be represented in your routing functions (5 points)
-     1. At a minimum one route should make a call to an external REST API
-  2.  A minimum of three routes should render data back to the client/user interface. (4 points)
-     1. At a minimum one route should return JSON data from external REST API to the interface
- 
- 
-
-### Deliverable 5 - Database implementation (15 Points)
-- Your application contains a file titled "database.js" and all of your SQL queries are listed and identified. (2 points)
-- Your database.js file contains a minimum of 4 queries that represent the Create, Retrieve, Update and Delete (CRUD) functionality. (8 points)
-- Database queries are represented within the routes and perform CRUD operations. (2 points)
-- SQLite Database file is included within the project folder  (3 points)
-
-## Assignment 3 - Finalizing User-Interface and Hosting Site
-
-### Deliverable 6 - Functional and User-Friendly front-end interface (15 Points)
-
-For this deliverable, you will need to make sure each of the pages of your site are properly functioning and renders in the browser.  Listed below are items that should be identified in your app. 
-
-- Interface uses HTML form(s) to capture data that is related to CREATE and UPDATE functionality. (7 Points)
-- Interface displays data that is queried from the database (5 Points)
-- Interface includes a home page that is mapped to the root directory of your project folder.  For example, your web application should have a route that listens for the URL path of “/” and returns the homepage. (3 Points)
-
-### Deliverable 7 - Hosting Site (15 Points)
-
-For this deliverable, your group will deploy and host your site on Heroku.  The service cost $5 a month for an Eco dynos.  Information regarding cost can be found at this [link](https://www.heroku.com/pricing#containers) 
-I recommend all group members pitch in a few dollars to host the site for 1 month.
-Heroku - [https://www.heroku.com](https://www.heroku.com/)  
-
-Only one member of your team will need to create an account. 
-Heroku will need to be configured to host your site from the GitHub repository issued by the instructor. 
-
-Update the repository Readme file to include the URL from Heroku
-
-
-### Extra Credit – Implementing Authentication + Authorization using Passport.js or a third-party authentication tool (7 Extra Credit Points)
-
-Once requirements from deliverable 1 -7 are met and and your group would like an additional challenge then I would encourage you to consider implementing an authentication library called passport.js or implementing a third-party authentication service such as AuthO (https://auth0.com/) or Stytch (https://stytch.com/). To successfully meet the requirements for extra credit, you will need to adhere to the following bullet points below. All the following requirements will need to be met to receive full credit. 
-
-- Implementation of authentication should flow succinctly with the rest of your applicaiton and not be disjointed and unpurposeful.
-- Once an account is successfully created, the end user will be directed to a welcome screen connects account to a dashboard or user profile page.
-- Once a user logs out, the end user is notified they are logged out of the application and redirected to another page.
-  
-### Submission Guidelines
-Your project folder will need to be submitted to the assigned GitHub repository provided to you by the instructor. In Sakai, you will need to submit the link to your repository by the due date and time listed in the write-up. Make sure you receive confirmation from Sakai that your assignment has been submitted.
-
-## Resources
-[Markdown Syntax CheatSheet](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
+Josh Kunin – CPST 342 – Fall 2025
