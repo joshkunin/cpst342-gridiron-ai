@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <h1>{{title}}</h1>
+
+  <form action="/simulate" method="POST">
+    <input name="homeTeam" placeholder="Home Team (e.g. Chiefs)" required>
+    <br><br>
+    <input name="awayTeam" placeholder="Away Team (e.g. Ravens)" required>
+    <br><br>
+    <input name="homeRating" placeholder="Home Rating (1-100)" type="number" min="1" max="100" required>
+    <br><br>
+    <input name="awayRating" placeholder="Away Rating (1-100)" type="number" min="1" max="100" required>
+    <br><br>
+    <button type="submit">Simulate Game (5x)</button>
+  </form>
+
+  <p><a href="/predictions">See All Saved Predictions</a></p>
+  <p><a href="/api-games" target="_blank">View live NFL games JSON (ESPN API)</a></p>
+
+</body>
+</html>
