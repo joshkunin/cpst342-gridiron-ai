@@ -1,0 +1,27 @@
+{
+  "name": "gridiron",
+  "version": "1.0.0",
+  "description": "**Team Name:** Josh team   **Member:** Josh Kunin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshkunin/cpst342-gridiron-ai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/joshkunin/cpst342-gridiron-ai/issues"
+  },
+  "homepage": "https://github.com/joshkunin/cpst342-gridiron-ai#readme",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "express": "^5.2.1",
+    "hbs": "^4.2.0",
+    "sqlite3": "^5.1.7"
+  }
+}
