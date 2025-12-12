@@ -25,19 +25,31 @@ app.get('/', (req, res) => {
 
 // Route 2: POST simulate - Accepts data, runs sim, saves to DB (accepts data: POST)
 app.post('/simulate', (req, res) => {
-  const { homeTeam, awayTeam, homeRating, awayRating } = req.body;
-  // Basic sim: Run 5 sims like Madden (random scores based on ratings)
+  const { homeTeam, awayTeam } = req.body;
+
+  // Run 5 quick simulations
   let homeWins = 0;
+  let totalHomeScore = 0;
+  let totalAwayScore = 0;
+
   for (let i = 0; i < 5; i++) {
-    const homeScore = Math.floor(Math.random() * (homeRating / 2)) + 10;
-    const awayScore = Math.floor(Math.random() * (awayRating / 2)) + 10;
+    const homeScore = Math.floor(Math.random() * 20) + 17; // Realistic NFL range 17-37
+    const awayScore = Math.floor(Math.random() * 20) + 17;
+    totalHomeScore += homeScore;
+    totalAwayScore += awayScore;
     if (homeScore > awayScore) homeWins++;
   }
-  const winner = homeWins > 2 ? homeTeam : awayTeam;
-  const score = '24-21'; // Avg from sims
 
-  // Save to DB (CRUD: Create)
-  db.createPrediction(homeTeam + ' vs ' + awayTeam, winner, score);
+  // Decide winner
+  const winner = homeWins > 2 ? homeTeam : awayTeam;
+
+  // Average score from the 5 sims (rounded)
+  const avgHome = Math.round(totalHomeScore / 5);
+  const avgAway = Math.round(totalAwayScore / 5);
+  const score = homeWins > 2 ? `${avgHome}-${avgAway}` : `${avgAway}-${avgHome}`;
+
+  // Save to DB
+  db.createPrediction(`${homeTeam} vs ${awayTeam}`, winner, score);
   res.redirect('/predictions');
 });
 
