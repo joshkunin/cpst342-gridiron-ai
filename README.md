@@ -1,52 +1,51 @@
-# Gridiron AI
+# Gridiron AI 🏈
 
 **Team Name:** Josh team  
-**Member:** Josh Kunin
+**Member:** Josh Kunin (solo)
 
 ### App Name
-**Gridiron AI** – The NFL Game Predictor
+**Gridiron AI** – NFL Game Predictor (MVP)
 
 ### How someone uses it
-1. Open the site on phone or laptop  
-2. Pick any game this week (like Bears vs Giants)  
-3. Hit “SIMULATE 1,000x”  
-4. Boom — you get:
-   - Final score prediction (27-24)
-   - Win % for each team
-   - Player prop odds (Justin Jefferson over 85.5 yards? 68% chance)
-   - A sick bar chart showing why one team wins
+1. Open the site (local or hosted)  
+2. On the home page, type any two NFL teams (e.g., Chiefs vs Ravens)  
+3. Hit “Simulate Game”  
+4. The app runs 5 quick simulations, predicts the winner + realistic score, saves it to the database  
+5. Redirects to the predictions page where you see all saved predictions  
+6. You can update the predicted score or delete any prediction
 
-### Why this app is so great
-Every Sunday my group chat argues for 3 hours about who covers the spread. Vegas lines don’t tell you WHY the Chiefs cook the Raiders. This app pulls Madden 25 ratings + real NFL stats + 1,000 simulations and actually shows you “Mahomes is 9-1 vs blitz-heavy teams this year”. Fantasy junkies and bettors are gonna live on this site.
+### Why this app rocks
+Every Sunday my group chat argues about who’s gonna win. Vegas lines are cool but don’t explain WHY. This MVP pulls real NFL game data from ESPN’s API and lets you simulate matchups with saved history. It’s the start of something bigger for fantasy nerds and bettors.
 
 ### Who it’s for
-- NFL fans who think they’re smarter than Skip Bayless  
-- Fantasy football weirdos (me)  
-- Dudes who throw $20 on player props every Sunday  
-- My roommate who still thinks Mitch Trubisky was good
+- NFL fans who love debating matchups  
+- Fantasy football players  
+- Anyone who wants quick “what-if” predictions  
+- My roommates who think they know ball
 
-### Pages we’re building
-1. **Home** – big cards of every game this week  
-2. **Predictor** – pick a game → see rosters + hit SIMULATE  
-3. **Results** – score, win %, prop predictions, dope charts  
-4. **Saved Bets** – login and save your favorite predictions  
-5. **How It Works** – flex page explaining the math so we look smart
+### Pages we built
+1. **Home** – clean form to enter two teams and simulate  
+2. **Predictions** – list of all saved predictions from the database with update/delete options
 
-### Three Goals
-1. Predict final score within 4 points 70% of the time  
-2. Load results in under 8 seconds (nobody got time to wait)  
-3. Work perfectly on iPhone (we all check scores in the group chat mid-party)
+### What we accomplished (MVP Goals)
+1. Full CRUD functionality with SQLite database  
+2. External REST API call to ESPN for real NFL games  
+3. Clean, user-friendly front-end with football theme  
+4. Hosted on Heroku (local demo recommended due to SQLite compatibility)
 
-### Tools we’re using
+### Tools we used
 - Node.js + Express (backend)  
-- React with Vite (frontend)  
-- Free NFL stats APIs (ESPN, nflfastR, or mySportsFeeds)  
-- SQLite for saving user predictions  
-- Vercel OR Heroku for hosting  
-- GitHub   
-- Replit when I code with the boys live  
-- VS Code
+- Handlebars (hbs) for templating  
+- SQLite for persistent data storage  
+- Axios for ESPN NFL API calls  
+- Heroku for hosting  
+- GitHub for version control  
+- VS Code everyday
 
-Let’s make something awesome this semester
+### Live Demo
+Local: http://localhost:3000 (run `node server.js`)  
+Hosted: [Your Heroku URL here — add when working]
+
+Thanks for a great class — learned a ton building this!
 
 Josh Kunin – CPST 342 – Fall 2025
