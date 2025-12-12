@@ -3,34 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saved Predictions - Gridiron AI</title>
+  <title>Saved Predictions</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+  <div class="container">
+    <h1>Saved Predictions</h1>
 
-  <h1>Saved Predictions</h1>
+    {{#if predictions.length}}
+      <ul>
+        {{#each predictions}}
+          <li>
+            <strong>{{this.game}}</strong> → Winner: <strong>{{this.winner}}</strong> | Predicted Score: {{this.score}}
+            
+            <div style="margin-top:10px;">
+              <form action="/update/{{this.id}}" method="POST" style="display:inline;">
+                <input name="score" placeholder="New score (e.g. 30-27)" size="15">
+                <button type="submit">Update</button>
+              </form>
+              <a href="/delete/{{this.id}}" onclick="return confirm('Delete this prediction?')" style="margin-left:10px;">Delete</a>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p style="text-align:center;">No predictions yet — go simulate a game!</p>
+    {{/if}}
 
-  {{#if predictions.length}}
-    <ul>
-      {{#each predictions}}
-        <li>
-          <strong>{{this.game}}</strong> → Winner: <strong>{{this.winner}}</strong> | Score: {{this.score}}
-          
-          <form action="/update/{{this.id}}" method="POST" style="display:inline;">
-            <input name="score" placeholder="New score" size="8">
-            <button type="submit">Update</button>
-          </form>
-          
-          <a href="/delete/{{this.id}}" onclick="return confirm('Delete this prediction?')">Delete</a>
-        </li>
-        <br>
-      {{/each}}
-    </ul>
-  {{else}}
-    <p>No predictions yet — go simulate a game!</p>
-  {{/if}}
-
-  <p><a href="/">← Back to Simulator</a></p>
-
+    <p style="text-align:center;"><a href="/">← Back to Simulator</a></p>
+  </div>
 </body>
 </html>

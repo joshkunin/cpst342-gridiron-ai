@@ -6,7 +6,7 @@ const axios = require('axios');
 const db = require('./database'); // For Deliverable 5
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Middleware for static files (images, CSS)
 app.use(express.static('public'));
