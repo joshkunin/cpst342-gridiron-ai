@@ -43,8 +43,9 @@ app.post('/simulate', (req, res) => {
 
 // Route 3: GET predictions - Renders DB data (renders data: list from DB)
 app.get('/predictions', (req, res) => {
-  const predictions = db.getAllPredictions();
-  res.render('predictions', { predictions });
+  db.getAllPredictions((predictions) => {
+    res.render('predictions', { predictions });
+  });
 });
 
 // Route 4: POST update - Accepts data, updates DB (accepts data: POST)
